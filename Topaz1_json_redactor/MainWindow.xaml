@@ -1,0 +1,66 @@
+﻿<Window x:Class="Topaz1_json_redactor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Topaz1_json_redactor"
+        mc:Ignorable="d"
+        Title="JSON Redactor" Height="1000" Width="1200"
+        ResizeMode="CanResize"
+        FontSize="20">
+
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <ToolBarTray>
+            <ToolBar Band="1" BandIndex="1">
+                <Button x:Name="open" Click="OpenFile" BorderBrush="Black" Margin="0,0,5,0">
+                    Open
+                </Button>
+                <Button x:Name="save" Click="SaveFile" BorderBrush="Black">
+                    Save
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Visible">
+                <TextBox x:Name="jsonTextBox" IsReadOnly="True"/>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1">
+                <DataGrid x:Name="jsonDataGrid" AutoGenerateColumns="False" SelectedCellsChanged="UpdateJsonTextBox" CanUserDeleteRows="True" ColumnWidth="*" CanUserSortColumns="False">
+                <DataGrid.Resources>
+                    <local:SubstringConverter x:Key="SubstringConverter" />
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Name, Converter={StaticResource SubstringConverter}, ConverterParameter='nsgbr'}" Value="True">
+                                <Setter Property="Background" Value="Green" />
+                                <Setter Property="Foreground" Value="White" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Value" Binding="{Binding Value}" />
+                    <DataGridTextColumn Header="Group" Binding="{Binding Group}" />
+                </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
+
+        </Grid>
+        
+
+    </Grid>
+</Window>

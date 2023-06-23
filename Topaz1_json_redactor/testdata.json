@@ -1,0 +1,464 @@
+{
+  "links": {
+    "SELF": {
+      "href": "/api/cbnd/v1/networkservices/110b0092-1dc7-4edd-9309-f1a30fb80d52",
+      "method": "GET"
+    }
+  },
+  "id": "110b0092-1dc7-4edd-9309-f1a30fb80d52",
+  "name": "StepSEG27-DCCOMM",
+  "vendor": null,
+  "nsdId": "7bd25a5b-d017-4b59-a281-f32eac11cd54",
+  "nsdVersion": "1.0.2",
+  "status": "DEPLOYED",
+  "priorityIndex": null,
+  "description": "Datacenter overlay objects for enterprise: StepSEG27",
+  "eventLog": [
+    {
+      "eventLogId": "93212e43-1194-4c1f-94c0-f386635bef94",
+      "operationName": "DEPLOY",
+      "job": {
+        "ownerId": "MISTRAL_WORKFLOW",
+        "id": 998093,
+        "status": "FINISHED",
+        "description": "Network service DEPLOY operation finished for network service name: StepSEG27-DCCOMM, id: 110b0092-1dc7-4edd-9309-f1a30fb80d52",
+        "startTime": 1598539888000,
+        "endTime": 1598542394000,
+        "lastModifiedTimestamp": 1598542394000,
+        "lastModifiedUser": "its_user01",
+        "targetEntityReference": "",
+        "realm": "CloudBandNetworkDirector",
+        "parentId": null,
+        "children": []
+      },
+      "jobId": 998093,
+      "startTime": 1598539918000,
+      "metadata": {
+        "type": "DEPLOY",
+        "name": null,
+        "nsdId": null,
+        "description": null,
+        "parameters": null
+      }
+    },
+    {
+      "eventLogId": "b6063f0a-e139-43f3-b201-1e402ecaa5e8",
+      "operationName": "CREATE",
+      "job": {
+        "ownerId": "LCM-SERVICE",
+        "id": 998075,
+        "status": "FINISHED",
+        "description": "Network service CREATE operation completed successfully for network service name: StepSEG27-DCCOMM id : 110b0092-1dc7-4edd-9309-f1a30fb80d52",
+        "startTime": 1598539883000,
+        "endTime": 1598539885000,
+        "lastModifiedTimestamp": 1598539885000,
+        "lastModifiedUser": "its_user01",
+        "targetEntityReference": "/api/cbnd/v1/networkservices/110b0092-1dc7-4edd-9309-f1a30fb80d52",
+        "realm": "CloudBandNetworkDirector",
+        "parentId": null,
+        "children": []
+      },
+      "jobId": 998075,
+      "startTime": 1598539884000,
+      "metadata": {
+        "type": "CREATE",
+        "name": "StepSEG27-DCCOMM",
+        "nsdId": "7bd25a5b-d017-4b59-a281-f32eac11cd54",
+        "description": "Datacenter overlay objects for enterprise: StepSEG27",
+        "parameters": [
+          {
+            "name": "enterprise_name",
+            "value": "StepSEG27",
+            "group": null
+          },
+          {
+            "name": "sdwan_domain_name",
+            "value": "SDWAN_Domain",
+            "group": null
+          },
+          {
+            "name": "nsgbr1",
+            "value": {
+              "name": "p246i44nsgbr-004-03",
+              "port": "port2",
+              "vlan": 2606
+            },
+            "group": null
+          },
+          {
+            "name": "nsgbr2",
+            "value": {
+              "name": "p246i45nsgbr-004-03",
+              "port": "port2",
+              "vlan": 2606
+            },
+            "group": null
+          },
+          {
+            "name": "nsgbr3",
+            "value": {
+              "name": "p246i44nsgbr-006-02",
+              "port": "port2",
+              "vlan": 2606
+            },
+            "group": null
+          },
+          {
+            "name": "nsgbr4",
+            "value": {
+              "name": "p246i45nsgbr-006-02",
+              "port": "port2",
+              "vlan": 2606
+            },
+            "group": null
+          },
+          {
+            "name": "shared_public_network",
+            "value": "TLC-L3-Internet-000-212-164-128-0-22",
+            "group": null
+          },
+          {
+            "name": "tenant_private_network",
+            "value": {
+              "name": "private_domain",
+              "subnet": "10.10.0.0/24",
+              "ip_pools": [
+                {
+                  "start": "10.10.0.100",
+                  "end": "10.10.0.254"
+                }
+              ]
+            },
+            "group": null
+          },
+          {
+            "name": "tenant_sync_network",
+            "value": "192.168.200.0/29",
+            "group": null
+          },
+          {
+            "name": "shared_management_network",
+            "value": "TLC-VnfManagement-000-10-86-0-0-16",
+            "group": null
+          },
+          {
+            "name": "mgmt_net_CSPAdmin",
+            "value": "172.16.2.0/24",
+            "group": null
+          },
+          {
+            "name": "mgmt_DNS_servers",
+            "value": {
+              "dns1": "95.167.167.95",
+              "dns2": "95.167.167.96"
+            },
+            "group": null
+          },
+          {
+            "name": "mgmt_NTP_servers",
+            "value": {
+              "M10": {
+                "ntp1": "10.84.2.129",
+                "ntp2": "10.84.2.139"
+              },
+              "M9": {
+                "ntp1": "10.85.2.129",
+                "ntp2": "10.85.2.139"
+              }
+            },
+            "group": null
+          },
+          {
+            "name": "snmp_manager_ip",
+            "value": "10.100.0.4",
+            "group": null
+          },
+          {
+            "name": "syslog_server_ip",
+            "value": "10.100.0.5",
+            "group": null
+          },
+          {
+            "name": "mgmt_net_list",
+            "value": [ "198.18.0.0/15" ],
+            "group": null
+          },
+          {
+            "name": "fw_config_common",
+            "value": {
+              "Ext_FW_IP": "212.164.130.59",
+              "Priv_FW_IP": "10.10.0.8"
+            },
+            "group": null
+          },
+          {
+            "name": "fw_config_web",
+            "value": {
+              "Ext_WAF_IP": "212.164.130.59",
+              "Priv_WAF_IP": "10.10.0.14"
+            },
+            "group": null
+          },
+          {
+            "name": "fw_config_antispam",
+            "value": {
+              "Ext_AntiSpam_IP": "212.164.130.60",
+              "Priv_AntiSpam_IP": "10.10.0.11"
+            },
+            "group": null
+          }
+        ]
+      }
+    }
+  ],
+  "creationTime": 1598539884000,
+  "lastModifiedTime": 1598542393000,
+  "lastModifiedUser": "its_user01",
+  "autoScalePolicy": null,
+  "nsdVendor": null,
+  "serviceDeploymentFlavour": null,
+  "connectionPointIds": [],
+  "parameters": [
+    {
+      "name": "mgmt_DNS_servers",
+      "value": {
+        "dns1": "95.167.167.95",
+        "dns2": "95.167.167.96"
+      },
+      "group": null
+    },
+    {
+      "name": "snmp_manager_ip",
+      "value": "10.100.0.4",
+      "group": null
+    },
+    {
+      "name": "fw_config_antispam",
+      "value": {
+        "Ext_AntiSpam_IP": "212.164.130.60",
+        "Priv_AntiSpam_IP": "10.10.0.11"
+      },
+      "group": null
+    },
+    {
+      "name": "sdwan_domain_name",
+      "value": "SDWAN_Domain",
+      "group": null
+    },
+    {
+      "name": "mgmt_net_list",
+      "value": [ "198.18.0.0/15" ],
+      "group": null
+    },
+    {
+      "name": "fw_config_common",
+      "value": {
+        "Ext_FW_IP": "212.164.130.59",
+        "Priv_FW_IP": "10.10.0.8"
+      },
+      "group": null
+    },
+    {
+      "name": "tenant_private_network",
+      "value": {
+        "name": "private_domain",
+        "subnet": "10.10.0.0/24",
+        "ip_pools": [
+          {
+            "start": "10.10.0.100",
+            "end": "10.10.0.254"
+          }
+        ]
+      },
+      "group": null
+    },
+    {
+      "name": "nsgbr1",
+      "value": {
+        "name": "p246i44nsgbr-004-03",
+        "port": "port2",
+        "vlan": 2606
+      },
+      "group": null
+    },
+    {
+      "name": "tenant_sync_network",
+      "value": "192.168.200.0/29",
+      "group": null
+    },
+    {
+      "name": "mgmt_NTP_servers",
+      "value": {
+        "M10": {
+          "ntp1": "10.84.2.129",
+          "ntp2": "10.84.2.139"
+        },
+        "M9": {
+          "ntp1": "10.85.2.129",
+          "ntp2": "10.85.2.139"
+        }
+      },
+      "group": null
+    },
+    {
+      "name": "shared_management_network",
+      "value": "TLC-VnfManagement-000-10-86-0-0-16",
+      "group": null
+    },
+    {
+      "name": "syslog_server_ip",
+      "value": "10.100.0.5",
+      "group": null
+    },
+    {
+      "name": "Use_SOC",
+      "value": false,
+      "group": "default"
+    },
+    {
+      "name": "shared_public_network",
+      "value": "TLC-L3-Internet-000-212-164-128-0-22",
+      "group": null
+    },
+    {
+      "name": "nsgbr3",
+      "value": {
+        "name": "p246i44nsgbr-006-02",
+        "port": "port2",
+        "vlan": 2606
+      },
+      "group": null
+    },
+    {
+      "name": "tenant_CE_network_list",
+      "value": [],
+      "group": "default"
+    },
+    {
+      "name": "fw_config_web",
+      "value": {
+        "Ext_WAF_IP": "212.164.130.59",
+        "Priv_WAF_IP": "10.10.0.14"
+      },
+      "group": null
+    },
+    {
+      "name": "mgmt_net_CSPAdmin",
+      "value": "172.16.2.0/24",
+      "group": null
+    },
+    {
+      "name": "nsgbr4",
+      "value": {
+        "name": "p246i45nsgbr-006-02",
+        "port": "port2",
+        "vlan": 2606
+      },
+      "group": null
+    },
+    {
+      "name": "nsgbr2",
+      "value": {
+        "name": "p246i45nsgbr-004-03",
+        "port": "port2",
+        "vlan": 2606
+      },
+      "group": null
+    },
+    {
+      "name": "enterprise_name",
+      "value": "StepSEG27",
+      "group": null
+    }
+  ],
+  "vnfs": [],
+  "pnfs": [
+    {
+      "id": "6357f627-091d-4152-b39f-ffbf9b382d46",
+      "pnfdId": "p246i44nsgbr-004-01",
+      "pnfdVersion": "1",
+      "pnfdVendor": "Nokia",
+      "name": "nsgbr1_pnf",
+      "connectionPointIds": [ "adc0846d-79d7-489f-baa7-aaf38bef7779", "cde377f4-5920-4d8e-8789-9b5827635395" ],
+      "links": {
+        "SELF": {
+          "href": "/api/cbnd/v1/pnfs/6357f627-091d-4152-b39f-ffbf9b382d46",
+          "method": "GET"
+        }
+      },
+      "nsrId": "110b0092-1dc7-4edd-9309-f1a30fb80d52",
+      "aggregatedStatus": "UNKNOWN",
+      "creationTime": 1598539884000,
+      "lastModifiedTime": null,
+      "lastModifiedUser": "its_user01",
+      "eventLog": []
+    },
+    {
+      "id": "17a53fc7-6689-47cd-b131-3ccb149f8d9b",
+      "pnfdId": "p246i44nsgbr-004-02",
+      "pnfdVersion": "1",
+      "pnfdVendor": "Nokia",
+      "name": "nsgbr2_pnf",
+      "connectionPointIds": [ "09a68b47-61cd-4002-a6f4-a46e33fef510", "e7d2e219-9b67-41db-b707-5c6d219d947e" ],
+      "links": {
+        "SELF": {
+          "href": "/api/cbnd/v1/pnfs/17a53fc7-6689-47cd-b131-3ccb149f8d9b",
+          "method": "GET"
+        }
+      },
+      "nsrId": "110b0092-1dc7-4edd-9309-f1a30fb80d52",
+      "aggregatedStatus": "UNKNOWN",
+      "creationTime": 1598539884000,
+      "lastModifiedTime": null,
+      "lastModifiedUser": "its_user01",
+      "eventLog": []
+    },
+    {
+      "id": "3cda7386-defa-4a9c-b078-7f2d15dc5a32",
+      "pnfdId": "p246i44nsgbr-004-04",
+      "pnfdVersion": "1",
+      "pnfdVendor": "Nokia",
+      "name": "nsgbr4_pnf",
+      "connectionPointIds": [ "185626df-c3f5-4155-906a-0a29ff722693", "81b1140b-febc-4589-950f-1c72ec6488a7" ],
+      "links": {
+        "SELF": {
+          "href": "/api/cbnd/v1/pnfs/3cda7386-defa-4a9c-b078-7f2d15dc5a32",
+          "method": "GET"
+        }
+      },
+      "nsrId": "110b0092-1dc7-4edd-9309-f1a30fb80d52",
+      "aggregatedStatus": "UNKNOWN",
+      "creationTime": 1598539885000,
+      "lastModifiedTime": null,
+      "lastModifiedUser": "its_user01",
+      "eventLog": []
+    },
+    {
+      "id": "b76ce46a-1693-4fb6-951c-6d25d45fc32a",
+      "pnfdId": "p246i44nsgbr-004-03",
+      "pnfdVersion": "1",
+      "pnfdVendor": "Nokia",
+      "name": "nsgbr3_pnf",
+      "connectionPointIds": [ "a5ca64e5-5b1b-4d4a-aa21-dd49e6551232", "287910f0-7c5a-452f-87f5-f3d75ffbdfce" ],
+      "links": {
+        "SELF": {
+          "href": "/api/cbnd/v1/pnfs/b76ce46a-1693-4fb6-951c-6d25d45fc32a",
+          "method": "GET"
+        }
+      },
+      "nsrId": "110b0092-1dc7-4edd-9309-f1a30fb80d52",
+      "aggregatedStatus": "UNKNOWN",
+      "creationTime": 1598539885000,
+      "lastModifiedTime": null,
+      "lastModifiedUser": "its_user01",
+      "eventLog": []
+    }
+  ],
+  "nfps": [],
+  "outputs": [
+    {
+      "name": "private_subnet_gateway",
+      "value": "10.10.0.1"
+    }
+  ]
+}
