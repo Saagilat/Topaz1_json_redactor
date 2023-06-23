@@ -43,6 +43,7 @@ namespace Topaz1_json_redactor
         {
 
             OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Json files (*.json)|*.json"; ;
             bool? response = fileDialog.ShowDialog();
 
             if (response == true)
@@ -71,6 +72,7 @@ namespace Topaz1_json_redactor
         private void SaveFile(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Json files (*.json)|*.json"; ;
             bool? response = saveFileDialog.ShowDialog();
 
             if (response == true)
